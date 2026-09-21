@@ -3,7 +3,11 @@ function isValidShift(hours) {
 }
 
 function calculatePay(hours, rate) {
-  return Math.round(hours * rate);
+  const regularHours = Math.min(hours, 8);
+  const overtimeHours = Math.max(hours - 8, 0);
+  const regularPay = Math.floor(regularHours * rate);
+  const overtimePay = Math.round(overtimeHours * rate * 1.5);
+  return regularPay + overtimePay;
 }
 
 module.exports = { isValidShift, calculatePay };
