@@ -42,3 +42,21 @@ Created the `v1.0-synced` tag and pushed the tag to GitHub. The GitHub repositor
 
 ![Task 6](screenshots/task6.png)
 
+## Written Answers
+
+### 1. What did the rejected push error message tell you, and why did it happen?
+
+The rejected push error told me that the remote branch contained changes that were not in my local branch. The push was rejected because my local branch was behind the remote branch, so Git required me to first fetch and reconcile the remote changes before pushing my own changes.
+
+### 2. What's the actual difference between how you resolved Task 3 (merge) vs Task 4 (rebase)?
+
+In Task 3, I used a merge to combine the remote changes with my local changes. This preserved both lines of development and created a merge commit. In Task 4, I used a rebase to move my local commit on top of the updated remote branch. This rewrote the local commit's position in history and resulted in a more linear history.
+
+### 3. What one habit would have avoided both rejected pushes in this lab?
+
+The one habit that would have avoided both rejected pushes is fetching or pulling the latest changes from the remote branch before starting work and pushing changes.
+
+### 4. Which approach - merge or rebase - would you default to on a shared team branch, and why?
+
+I would default to merge on a shared team branch because it preserves the existing shared history and does not rewrite commits that other teammates may already have.
+
